@@ -139,13 +139,14 @@
       this.popperOptions = Object.assign(this.popperOptions, this.options);
     },
     mounted: function mounted() {
-      this.referenceElm = this.reference || this.$slots.reference[0].elm;
+      this.referenceElm = this.$refs.wrapper.children[0];
       this.popper = this.$slots["default"][0].elm;
 
       switch (this.trigger) {
         case 'clickToOpen':
           on(this.referenceElm, 'click', this.doShow);
           on(document, 'click', this.handleDocumentClick);
+          on(document, 'touchstart', this.handleDocumentClick);
           break;
 
         case 'click': // Same as clickToToggle, provided for backwards compatibility.
@@ -153,6 +154,7 @@
         case 'clickToToggle':
           on(this.referenceElm, 'click', this.doToggle);
           on(document, 'click', this.handleDocumentClick);
+          on(document, 'touchstart', this.handleDocumentClick);
           break;
 
         case 'hover':
@@ -395,7 +397,7 @@
   /* script */
   const __vue_script__ = script;
   // For security concerns, we use only base name in production mode. See https://github.com/vuejs/rollup-plugin-vue/issues/258
-  script.__file = "/Users/user/projects/vue-popper/src/component/popper.js.vue";
+  script.__file = "/Users/jason.deng/dev/vue-popper/src/component/popper.js.vue";
   /* template */
   var __vue_render__ = function() {
     var _vm = this;
@@ -403,7 +405,7 @@
     var _c = _vm._self._c || _h;
     return _c(
       _vm.tagName,
-      { tag: "component" },
+      { tag: "component", class: { "popper-active": _vm.showPopper } },
       [
         _c(
           "transition",
@@ -436,9 +438,9 @@
           ]
         ),
         _vm._v(" "),
-        _vm._t("reference")
+        _c("span", { ref: "wrapper" }, [_vm._t("reference")], 2)
       ],
-      2
+      1
     )
   };
   var __vue_staticRenderFns__ = [];

@@ -88,7 +88,9 @@
         <slot>{{ content }}</slot>
       </span>
     </transition>
-    <slot name="reference"></slot>
+    <span ref="wrapper">
+      <slot name="reference"></slot>
+    </span>
   </component>
 </template>
 
@@ -232,8 +234,8 @@
     },
 
     mounted() {
-      this.referenceElm = this.reference || this.$slots.reference[0].elm;
-      this.popper = this.$slots.default[0].elm;
+    this.referenceElm = this.$refs.wrapper.children[0]
+    this.popper = this.$slots.default[0].elm;
 
       switch (this.trigger) {
         case 'clickToOpen':
