@@ -6,8 +6,8 @@ export default {
   build: {
     lib: {
       entry: path.resolve(__dirname, 'lib/main.js'),
-      name: 'VuePopper',
-      fileName: format => `vue-popper.${format}.js`,
+      name: 'VuePopperJS',
+      fileName: format => `vue-popperjs.${format}.js`,
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled

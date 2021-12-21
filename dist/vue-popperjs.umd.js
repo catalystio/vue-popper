@@ -1,4 +1,4 @@
-(function(v,y){typeof exports=="object"&&typeof module!="undefined"?module.exports=y(require("vue")):typeof define=="function"&&define.amd?define(["vue"],y):(v=typeof globalThis!="undefined"?globalThis:v||self,v.VuePopper=y(v.Vue))})(this,function(v){"use strict";/**!
+(function(v,y){typeof exports=="object"&&typeof module!="undefined"?module.exports=y(require("vue")):typeof define=="function"&&define.amd?define(["vue"],y):(v=typeof globalThis!="undefined"?globalThis:v||self,v.VuePopperJS=y(v.Vue))})(this,function(v){"use strict";/**!
  * @fileOverview Kickass library to create and place poppers near their reference elements.
  * @version 1.15.0
  * @license

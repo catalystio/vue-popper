@@ -1,15 +1,15 @@
 {
-  "name": "vue-popper",
+  "name": "vue-popperjs",
   "files": [
     "dist"
   ],
   "version": "0.0.0",
-  "main": "./dist/vue-popper.umd.js",
-  "module": "./dist/vue-popper.es.js",
+  "main": "./dist/vue-popperjs.umd.js",
+  "module": "./dist/vue-popperjs.es.js",
   "exports": {
     ".": {
-      "import": "./dist/vue-popper.es.js",
-      "require": "./dist/vue-popper.umd.js"
+      "import": "./dist/vue-popperjs.es.js",
+      "require": "./dist/vue-popperjs.umd.js"
     }
   },
   "scripts": {
