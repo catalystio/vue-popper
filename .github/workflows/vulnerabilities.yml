@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Sync GitHub Security Alerts with Jira
-        uses: reload/github-security-jira@v1.3.1
+        uses: reload/github-security-jira@v1.5.0
         env:
           GH_SECURITY_TOKEN: ${{ secrets.GitHubSecurityToken }}
           JIRA_TOKEN: ${{ secrets.JiraApiToken }}
